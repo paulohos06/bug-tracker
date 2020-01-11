@@ -9,6 +9,7 @@
   "keywords": [],
   "author": "Paulo Henrique <paulo.henrique06@hotmail.com>",
   "license": "MIT",
+  "engines": { "node": "12.x" },
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",

@@ -1,0 +1,35 @@
+<%- include('header') %>
+    <form id="form" method="POST">
+        <div class="form-group">
+            <label for="input-name">Nome</label>
+            <input type="text" class="form-control" id="input-name">
+        </div>
+        <!-- .form-group -->
+
+        <div class="form-group">
+            <label for="input-email">E-mail</label>
+            <input type="email" class="form-control" id="input-email">
+        </div>
+        <!-- .form-group -->
+
+        <div class="form-group">
+            <label for="input-how-reproduce">Como reproduzir o erro?</label>
+            <input type="text" class="form-control" id="input-how-to-reproduce">
+        </div>
+        <!-- .form-group -->
+
+        <div class="form-group">
+            <label for="input-expected-output">A saída esperada?</label>
+            <input type="text" class="form-control" id="input-expected-output">
+        </div>
+        <!-- .form-group -->
+
+        <div class="form-group">
+            <label for="input-received-output">A saída recebida?</label>
+            <input type="text" class="form-control" id="input-received-output">
+        </div>
+        <!-- .form-group -->
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+<%- include('footer') %>

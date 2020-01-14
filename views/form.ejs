@@ -1,4 +1,11 @@
 <%- include('header') %>
+
+    <% if(successMsg) { %>
+        <div class="alert alert-success" role="alert">
+            <%= successMsg %>
+        </div>
+    <% } %>
+
     <form id="form" method="POST">
         <div class="form-group">
             <label for="name">Nome</label>
@@ -13,6 +20,17 @@
         <!-- .form-group -->
 
         <div class="form-group">
+            <label for="issueType">Classificação</label>
+            <select name="issueType" class="form-control">
+                <option value="">Selecione</option>
+                <option value="CRITICAL">Crítico</option>
+                <option value="BUG">Falha</option>
+                <option value="ENHANCEMENT">Melhoria</option>
+            </select>
+        </div>
+        <!-- .form-group -->
+
+        <div class="form-group">
             <label for="howToReproduce">Como reproduzir o erro?</label>
             <input type="text" class="form-control" name="howToReproduce">
         </div>
@@ -20,16 +38,30 @@
 
         <div class="form-group">
             <label for="expectedOutput">A saída esperada?</label>
-            <input type="text" class="form-control" name="expectedOutput">
+            <textarea name="expectedOutput" id="expectedOutput" class="form-control" rows="5"></textarea>
         </div>
         <!-- .form-group -->
 
         <div class="form-group">
             <label for="receivedOutput">A saída recebida?</label>
-            <input type="text" class="form-control" name="receivedOutput">
+            <textarea name="receivedOutput" id="receivedOutput" class="form-control" rows="5"></textarea>
         </div>
         <!-- .form-group -->
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="userAgent" id="userAgent" value="">
+            <input type="hidden" class="form-control" name="userDate" id="userDate" value="">
+        </div>
+        <!-- .form-group -->
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            &nbsp;
+            <a href="/" class="btn btn-secondary">Cancelar</a>
+        </div>
+
     </form>
+
+    <br>
+
 <%- include('footer') %>
